@@ -14,7 +14,7 @@ link_directories( DemoGafferExtension ${GAFFER_ROOT}/lib )
 add_library( DemoGafferExtension SHARED ${DemoGafferExtensionSrc} )
 target_compile_definitions( DemoGafferExtension PRIVATE BOOST_SIGNALS_NO_DEPRECATION_WARNING=1 )
 target_include_directories( DemoGafferExtension PRIVATE include ${GAFFER_ROOT}/include )
-target_link_libraries( DemoGafferExtension Gaffer GafferScene IECore )
+target_link_libraries( DemoGafferExtension Gaffer GafferScene IECore IECoreScene )
 install( TARGETS DemoGafferExtension DESTINATION lib)
 
 # build the python bindings
